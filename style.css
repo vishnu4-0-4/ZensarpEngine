@@ -1,0 +1,183 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    font-size:62.5%;
+}
+
+body{
+    min-height:100vh;
+    font-family:Arial,sans-serif;
+    background:linear-gradient(
+        135deg,
+        #0f172a,
+        #1e293b,
+        #312e81
+    );
+    padding:2rem;
+}
+
+.title{
+    text-align:center;
+    font-size:4.5rem;
+    color:white;
+    margin-top:4rem;
+    margin-bottom:3rem;
+    letter-spacing:1px;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:1.5rem;
+    flex-wrap:wrap;
+}
+
+.inpt{
+    width:min(600px,90vw);
+    padding:1.5rem 2rem;
+    border:none;
+    outline:none;
+    border-radius:1.5rem;
+    font-size:1.8rem;
+
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(12px);
+    color:white;
+
+    border:1px solid rgba(255,255,255,.2);
+}
+
+.inpt::placeholder{
+    color:#d1d5db;
+}
+
+.inpt:focus{
+    box-shadow:0 0 25px rgba(168,85,247,.5);
+}
+
+#btn{
+    padding:1.5rem 3rem;
+    border:none;
+    border-radius:1.5rem;
+    cursor:pointer;
+
+    font-size:1.8rem;
+    font-weight:600;
+    color:white;
+
+    background:linear-gradient(
+        135deg,
+        #a855f7,
+        #ec4899
+    );
+
+    transition:.3s;
+}
+
+#btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px rgba(236,72,153,.4);
+}
+
+.Result{
+    max-width:1400px;
+    margin:5rem auto;
+
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(320px,1fr));
+
+    gap:2.5rem;
+}
+
+.card{
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    border-radius:2rem;
+
+    padding:2rem;
+
+    transition:.3s;
+
+    display:flex;
+    flex-direction:column;
+    gap:1.2rem;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.25);
+}
+
+.card p:first-child{
+    color:white;
+    font-size:2rem;
+    font-weight:700;
+    line-height:1.5;
+}
+
+.card p:last-child{
+    color:#d1d5db;
+    font-size:1.5rem;
+    line-height:1.6;
+}
+
+.card a{
+    align-self:flex-start;
+
+    text-decoration:none;
+
+    padding:1rem 1.8rem;
+
+    border-radius:1rem;
+
+    background:linear-gradient(
+        135deg,
+        #a855f7,
+        #ec4899
+    );
+
+    color:white;
+    font-size:1.4rem;
+    font-weight:600;
+}
+
+.card a:hover{
+    opacity:.9;
+}
+
+@media(max-width:600px){
+
+    .title{
+        font-size:3.2rem;
+    }
+
+    .container{
+        flex-direction:column;
+    }
+
+    .inpt{
+        width:100%;
+    }
+
+    #btn{
+        width:100%;
+    }
+
+    .Result{
+        grid-template-columns:1fr;
+    }
+}
